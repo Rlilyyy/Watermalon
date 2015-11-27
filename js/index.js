@@ -17,4 +17,27 @@
 			elem = null;
 		}, 2000);
 	})();
+
+	// 
+	(function() {
+		var xhr = new XMLHttpRequest();
+		xhr.onload = function(){
+			alert(JSON.parse(xhr.responseText));
+		};
+		xhr.open('GET', 'http://localhost/Watermalon/index.php', true);
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xhr.send();
+		
+	})();
 })();
+
+function getData() {
+
+}
+
+getData.prototype = {
+	constructor: getData,
+	get: function(url, type, callback) {
+		
+	}
+}
