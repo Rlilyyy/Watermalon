@@ -19,17 +19,8 @@
 	
 })();
 
-$.init()
-	.setTarget("GET", "http://localhost/Watermalon/index.php")
-		.setAsync(true)
-			.setData("")
-				.success(function(data) {
-
-					data = JSON.parse(data);
-
-					var elem = document.getElementById("start");
-
-					elem.style.backgroundImage = "url('" + data.img + "')";
-
-				})
-				.start();
+// 接口地址命名空间
+var Connection = {
+	GUIDE: "http://localhost/Watermalon/index/guide.php",
+	LATEST: "http://localhost/Watermalon/index/latest.php"
+}

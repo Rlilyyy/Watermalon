@@ -5,6 +5,11 @@ html {
 body {
 	font-family: "Microsoft YaHei", "微软雅黑", Georgia, "Times New Roman", STXihei, "华文细黑", serif;
 	margin: 0;
+	background-color: rgb(240,240,240);
+}
+
+* {
+	box-sizing: border-box;
 }
 
 /* BEGIN 打开网页显示图片和LOGO */
@@ -44,3 +49,77 @@ body {
 	font-size: 1.5rem;
 }
 /* END */
+
+header {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	background-color: rgb(150,205,205);
+	font-size: 2rem;
+	color: white;
+}
+
+.selector {
+	width: 100%;
+	height: 45px;
+	background-color: rgb(150,205,205);
+	font-size: 1.5rem;
+	color: white;
+}
+
+.selector span {
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+	line-height: 45px;
+	text-align: center;
+	margin-left: -2px;
+	margin-right: -2px;
+}
+
+.selector .current {
+	border-bottom: 3px solid rgb(0,139,139);
+}
+
+.news {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	background-color: rgb(240,240,240);
+}
+
+.hot-news {
+	width: 100%;
+	height: auto;
+}
+
+.news-item {
+	width: 100%;
+	height: 80px;
+	padding: 10px;
+	background-color: white;
+	box-shadow: 0px 1px 2px rgb(200,200,200);
+	border-radius: 3px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.item-title {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding-right: 90px;
+	float: left;
+	font-size: 1.3rem;
+}
+
+.item-img {
+	width: 74px;
+	height: 60px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-position: center;
+	background-size: cover;
+}

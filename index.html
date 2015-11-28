@@ -11,9 +11,111 @@
 	<script src="js/index.js"></script>
 </head>
 <body>
-	<div class="start" id="start">
+	<div class="start" id="start" style="display: none">
 		<span>Watermalon</span>
 		<span>开启阅读“无”时代</span>
 	</div>
+
+	<header>
+		Watermalon
+	</header>
+
+	<div class="selector">
+		<span class="current">今日热闻</span>
+		<span>设计中</span>
+		<span>设计中</span>
+		<span>设计中</span>
+	</div>
+
+	<div class="news">
+		<div class="hot-news" id="hot-news">
+			<!-- <div class="news-item">
+				<span class="item-title">
+					你是谁你是谁你是谁你是谁你是谁你是谁你是谁你是谁你是谁aasgfadgadg
+				</span> 
+				<img class="item-img" src="index.jpg">
+			</div>
+			<div class="news-item">
+				<span class="item-title">
+					你是谁你是谁你是谁你是谁你是谁你是谁你是谁你是谁你是谁aasgfadgadg
+				</span> 
+				<img class="item-img" src="index.jpg">
+			</div>
+			<div class="news-item">
+				<span class="item-title">
+					你是谁你是谁你是谁你是谁你是谁你是谁你是谁你是谁你是谁aasgfadgadg
+				</span> 
+				<img class="item-img" src="index.jpg">
+			</div> -->
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$.init()
+			.setTarget("GET", Connection.GUIDE)
+				.setAsync(true)
+					.setData("")
+						.success(function(data) {
+
+							data = JSON.parse(data);
+
+							var elem = document.getElementById("start");
+
+							elem.style.backgroundImage = "url('" + data.img + "')";
+
+						})
+						.start();
+
+		$.init()
+			.setTarget("GET", Connection.LATEST)
+				.setAsync(true)
+					.setData("")
+						.success(function(data) {
+
+							data = JSON.parse(data);
+
+							appenHotNews.call(window, data);
+
+						})
+						.start();
+
+	function getHotNewsElem(title, image) {
+
+		var itemElem = document.createElement("div");
+		var titleElem = document.createElement("span");
+		var imgElem = document.createElement("div");
+
+		itemElem.className = "news-item";
+		titleElem.className = "item-title";
+		imgElem.className = "item-img";
+
+		titleElem.innerHTML = title;
+		imgElem.style.backgroundImage = "url('" + image + "')";
+
+		itemElem.appendChild(titleElem);
+		itemElem.appendChild(imgElem);
+
+		return itemElem;
+	}
+
+	function appenHotNews(data) {
+
+		console.log(data)
+		var hotElem = document.getElementById("hot-news");
+		var stories = data.stories;
+
+		for(var i=0;i<stories.length;i++) {
+
+			var title = stories[i].title;
+			var images = stories[i].images;
+
+			var itemElem = getHotNewsElem(title, images[0]);
+
+			hotElem.appendChild(itemElem);
+
+		}
+
+	}
+	</script>
 </body>
 </html>
