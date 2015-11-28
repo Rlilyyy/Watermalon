@@ -1,5 +1,4 @@
-(function() {
-
+;(function() {
 	// 2000ms后隐藏引导页
 	(function hideGuide() {
 		setTimeout(function() {
@@ -17,27 +16,20 @@
 			elem = null;
 		}, 2000);
 	})();
-
-	// 
-	(function() {
-		var xhr = new XMLHttpRequest();
-		xhr.onload = function(){
-			alert(JSON.parse(xhr.responseText));
-		};
-		xhr.open('GET', 'http://localhost/Watermalon/index.php', true);
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xhr.send();
-		
-	})();
+	
 })();
 
-function getData() {
+$.init()
+	.setTarget("GET", "http://localhost/Watermalon/index.php")
+		.setAsync(true)
+			.setData("")
+				.success(function(data) {
 
-}
+					data = JSON.parse(data);
 
-getData.prototype = {
-	constructor: getData,
-	get: function(url, type, callback) {
-		
-	}
-}
+					var elem = document.getElementById("start");
+
+					elem.style.backgroundImage = "url('" + data.img + "')";
+
+				})
+				.start();

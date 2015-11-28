@@ -18,7 +18,7 @@ body {
 	/*z-index: 1000;*/
 	box-sizing: border-box;
 	z-index: 1000;
-	background: url("../index.jpg") no-repeat center;
+	background: url("") no-repeat center;
 	background-size: cover;
 	opacity: 1;
 	transition: opacity 2s ease;
