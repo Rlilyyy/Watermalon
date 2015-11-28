@@ -22,5 +22,6 @@
 // 接口地址命名空间
 var Connection = {
 	GUIDE: "http://localhost/Watermalon/index/guide.php",
-	LATEST: "http://localhost/Watermalon/index/latest.php"
+	LATEST: "http://localhost/Watermalon/index/latest.php",
+	IMAGE: "http://localhost/Watermalon/index/getImage.php"
 }

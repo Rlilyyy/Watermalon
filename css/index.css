@@ -25,6 +25,7 @@ body {
 	z-index: 1000;
 	background: url("") no-repeat center;
 	background-size: cover;
+	background-color: white;
 	opacity: 1;
 	transition: opacity 2s ease;
 	-webkit-transition: opacity 2s ease;

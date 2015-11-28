@@ -11,7 +11,7 @@
 	<script src="js/index.js"></script>
 </head>
 <body>
-	<div class="start" id="start" style="display: none">
+	<div class="start" id="start">
 		<span>Watermalon</span>
 		<span>开启阅读“无”时代</span>
 	</div>
@@ -26,7 +26,6 @@
 		<span>设计中</span>
 		<span>设计中</span>
 	</div>
-
 	<div class="news">
 		<div class="hot-news" id="hot-news">
 			<!-- <div class="news-item">
@@ -61,7 +60,7 @@
 
 							var elem = document.getElementById("start");
 
-							elem.style.backgroundImage = "url('" + data.img + "')";
+							elem.style.backgroundImage = "url('" + Connection.IMAGE + "?id=" + data.img + "')";
 
 						})
 						.start();
@@ -90,7 +89,7 @@
 		imgElem.className = "item-img";
 
 		titleElem.innerHTML = title;
-		imgElem.style.backgroundImage = "url('" + image + "')";
+		imgElem.style.backgroundImage = "url('" + Connection.IMAGE + "?id=" +image + "')";
 
 		itemElem.appendChild(titleElem);
 		itemElem.appendChild(imgElem);
