@@ -60,7 +60,7 @@
 
 							var elem = document.getElementById("start");
 
-							elem.style.backgroundImage = "url('" + Connection.IMAGE + "?id=" + data.img + "')";
+							elem.style.backgroundImage = "url('" + getRealUrl(data.img) + "')";
 
 						})
 						.start();
@@ -78,6 +78,10 @@
 						})
 						.start();
 
+	function getRealUrl(url) {
+		return Connection.IMAGE + "?id=" + url;
+	}
+
 	function getHotNewsElem(title, image) {
 
 		var itemElem = document.createElement("div");
@@ -89,7 +93,7 @@
 		imgElem.className = "item-img";
 
 		titleElem.innerHTML = title;
-		imgElem.style.backgroundImage = "url('" + Connection.IMAGE + "?id=" +image + "')";
+		imgElem.style.backgroundImage = "url('" + getRealUrl(image) + "')";
 
 		itemElem.appendChild(titleElem);
 		itemElem.appendChild(imgElem);
