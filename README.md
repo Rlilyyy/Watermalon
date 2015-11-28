@@ -1,4 +1,7 @@
-##Watermalon<br>为轻松阅读而生
+#Watermalon<br>为轻松阅读而生
+##声明
+####Watermalon所使用的接口均由 知乎（Zhihu.Inc） 提供，由他人获取并共享，同时该项目仅做个人学习用途，不做商业用途，若被告知需停止共享与使用，本人会及时删除此页面与整个项目。请您暸解相关情况，并遵守知乎协议。
+
 ###1.为XMLHttpRequest写的`httpbingo.js`
 <br>
 ####`httpbingo.js`是为了更方便地使用XMLHttpRequest而写的JS函数，调用方法如下：
