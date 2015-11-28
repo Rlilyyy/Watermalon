@@ -25,7 +25,7 @@ $.init()
 ####`$.init()`必须在开头调用，否则无法返回一个正确的Object
 ####`start()`必须在最后调用，否则可能会忽略在start()之后的调用的函数设置的数据
 ####`setTarget(type, url)`用于设置连接方法与连接url地址，默认方法为GET
-####'setAsync(isAsync)(未完善)'用于设置是否异步传输，默认为true
+####`setAsync(isAsync)(未完善)`用于设置是否异步传输，默认为true
 ####`setData(data)`用于设置传输给连接的数据
 ####`success(callbackFun)`用于设置连接成功后的回调函数，如果如此写`callbackFun(data)`，那么data就是获取到的数据
 ####`error(callbackFun)(未完善)`用于设置连接出错后的回调函数
