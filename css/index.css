@@ -32,6 +32,7 @@ body {
 	-moz-transition: opacity 2s ease;
 	-o-transition: opacity 2s ease;
 	overflow: hidden;
+	display: none;
 }
 
 .close {
@@ -90,6 +91,10 @@ header {
 	background-color: rgb(240,240,240);
 }
 
+.news a {
+	color: inherit;
+}
+
 .hot-news {
 	width: 100%;
 	height: auto;
@@ -112,7 +117,7 @@ header {
 	height: 100%;
 	padding-right: 90px;
 	float: left;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 .item-img {

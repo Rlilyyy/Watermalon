@@ -23,5 +23,6 @@
 var Connection = {
 	GUIDE: "http://localhost/Watermalon/index/guide.php",
 	LATEST: "http://localhost/Watermalon/index/latest.php",
-	IMAGE: "http://localhost/Watermalon/index/getImage.php"
+	IMAGE: "http://localhost/Watermalon/index/getImage.php",
+	NEWS: "http://localhost/Watermalon/index/getNews.php"
 }

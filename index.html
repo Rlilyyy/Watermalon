@@ -82,8 +82,9 @@
 		return Connection.IMAGE + "?id=" + url;
 	}
 
-	function getHotNewsElem(title, image) {
+	function getHotNewsElem(title, image, id) {
 
+		var aElem = document.createElement("a");
 		var itemElem = document.createElement("div");
 		var titleElem = document.createElement("span");
 		var imgElem = document.createElement("div");
@@ -92,13 +93,15 @@
 		titleElem.className = "item-title";
 		imgElem.className = "item-img";
 
+		aElem.href = Connection.NEWS + "?id=" + id;
 		titleElem.innerHTML = title;
 		imgElem.style.backgroundImage = "url('" + getRealUrl(image) + "')";
 
 		itemElem.appendChild(titleElem);
 		itemElem.appendChild(imgElem);
+		aElem.appendChild(itemElem);
 
-		return itemElem;
+		return aElem;
 	}
 
 	function appenHotNews(data) {
@@ -111,8 +114,9 @@
 
 			var title = stories[i].title;
 			var images = stories[i].images;
+			var id = stories[i].id;
 
-			var itemElem = getHotNewsElem(title, images[0]);
+			var itemElem = getHotNewsElem(title, images[0], id);
 
 			hotElem.appendChild(itemElem);
 
