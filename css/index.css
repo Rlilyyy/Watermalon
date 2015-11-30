@@ -92,7 +92,11 @@ header {
 }
 
 .news a {
-	color: inherit;
+	display: block;
+	color: black;
+}
+.news a:active, .news-item:active {
+	background-color: rgb(200,200,200);
 }
 
 .hot-news {
