@@ -6,7 +6,8 @@
 ### 1.为XMLHttpRequest写的`httpbingo.js`
 <br>
 #### `httpbingo.js`是为了更方便地使用XMLHttpRequest而写的JS函数，调用方法如下：
-``` js
+
+```js
 $.init()
 	.setTarget("GET", "http://localhost/Watermalon/index.php")
 		.setAsync(true)
@@ -22,7 +23,9 @@ $.init()
 				})
 				.start();
 ```
+
 #### Warning!!!
+
 * `$.init()`必须在开头调用，否则无法返回一个正确的Object
 * `start()`必须在最后调用，否则可能会忽略在start()之后的调用的函数设置的数据
 * `setTarget(type, url)`用于设置连接方法与连接url地址，默认方法为GET
